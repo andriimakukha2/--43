@@ -1,0 +1,133 @@
+/* Загальні стилі */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212; /* Темний фон */
+  color: #ffffff; /* Білий текст */
+  margin: 0;
+  padding: 0;
+}
+
+/* Головні заголовки */
+h1, h2 {
+  text-align: center;
+  color: #f1c40f; /* Жовтий колір для заголовків */
+  animation: fadeIn 1s ease-in;
+}
+
+/* Сітка автомобілів */
+.cars {
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.car-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s; // Додайте анімацію
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; // Краще оброблення зображення
+    transition: opacity 0.3s; // Додайте плавність
+
+    // Опціонально: Задати фоновий колір поки зображення завантажується
+    &.loading {
+      opacity: 0; // Зображення не видно поки завантажується
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05); // Ефект при наведенні
+  }
+}
+
+/* Опис автомобіля */
+.car-card h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+/* Опис автомобіля */
+.car-card p {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+/* Кнопки */
+.button {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e67e22;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Стилі навігації */
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #444;
+}
+
+.active {
+  background-color: #555;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Стилізація кнопок в навігації */
+.nav-button {
+  background-color: #f1c40f; /* Жовтий колір кнопки */
+  color: #121212; /* Темний текст */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #d4ac0e; /* Темніший жовтий при наведенні */
+}
